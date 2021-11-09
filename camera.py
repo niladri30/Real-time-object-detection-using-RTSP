@@ -3,7 +3,7 @@ import cv2
 
 
 class CameraStream(object):
-    def __init__(self, src=0):
+    def __init__(self, src='rtsp://demo:demo@ipvmdemo.dyndns.org:5541/onvif-media/media.amp?profile=profile_1_h264&sessiontimeout=60&streamtype=unicast'):
         self.stream = cv2.VideoCapture(src)
 
         (self.grabbed, self.frame) = self.stream.read()
